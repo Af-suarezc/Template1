@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: 'Roboto Mono', monospace;
+        margin: 0;
+        background-color: #01d685bd;
+        opacity: 0.65;
+        font-family: 'Roboto Mono', monospace;        
+    }
+    header{
+        font-size: 45px;
+        width: 90px;
+        background-color: #01d685bd;
+    }
+    .login{
+        background: linear-gradient(#bdc918bd, #5903a0c9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 30px;
+        min-height:calc(100vh - 200px);
+    }
+    .login__container{
+        background-color:rgba(255, 255, 255, 0.1) ;
+        border: solid white 2px;
+        border-radius: 19px;
+        color: white;
+        padding: 60px 68px 50px;
+        min-height: 700px;
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .login__container--form{
+        display: flex;
+        flex-direction: column;
+    }
+    .login__container--form label{
+        font-size: 15px;
+
+    }
+    .login__container--remember-me {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        margin-top:10px;
+    }
+    .login__container--remember-me a{
+        color: aliceblue;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .login__container--remember-me a:hover{
+        text-decoration: underline;
+    }
+    .login__container--social-media > div > img{
+        width: 20px;
+        height: 20px;
+        opacity: 0.95;
+        margin-right: 10px;
+
+    }
+    .login__container--social-media > div {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .login__container--register{
+        font-size: 12px;
+    }
+    .login__container--register a{
+        font-size: 14px;
+        color: white;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    .login__container--register a:hover{
+        text-decoration: underline;
+    }
+    .input { 
+        background-color: transparent;
+        border-left: 0px;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 2px solid white;
+        font-family: 'Roboto Mono', monospace;
+        padding: 0px 20px;
+        outline: none;
+        height: 50px;
+    }
+    ::placeholder{
+        color: white;
+    }
+    .password {
+        background-color: transparent;
+        border-left: 0px;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 2px solid white;
+        font-family: 'Roboto Mono', monospace;
+        padding: 0px 20px;
+        outline: none;
+        height: 50px;
+    }
+    .button{
+        background-color: transparent;
+        border-radius: 15px;
+        font-size: 18px;
+        font-family: 'Roboto Mono', monospace;
+        color: white;
+        font-weight: bold;
+        height: 50px;
+        letter-spacing: 1px;
+        margin: 20px;
+        
+    }
+    .footer{
+        background-color:#8e06fde7;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+    }
+    .footer > a {
+        color: white;
+        margin: 25px;
+        font-weight: bolder;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+    }
+    .footer > a:hover{
+        text-decoration: underline;
+    }
+    @media only screen and (max-width: 600px){
+        .login__container{
+            background-color: transparent;
+            border: none;
+            padding: 0px;
+            width: 100%;
+        }
+        .footer{
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+</style>
+<body>
+    <header>
+        <img class="header__img" src="https://img.icons8.com/officel/2x/480p.png" alt="IconoPlataforma">
+        
+    </header>
+    <section class="login">
+        <section class="login__container">
+            <h2>Inicio de sesión</h2>
+            <form class="login__container--form">
+                <input class="input" type="text" placeholder="Correo">
+                <input class="password" type="text" placeholder="Contraseña">
+                <button class="button">Iniciar sesión</button>
+                <div class="login__container--remember-me">
+                    <label>
+                        <input type="checkbox" name="" id="cbox1" value="checkbox">Recuerdame
+                    </label>
+                    <a href="/">Olvide mi Contraseña</a>
+                </div>
+            </form>
+            <section class="login__container--social-media">
+                <div> <img src="https://img.icons8.com/bubbles/2x/google-logo.png" alt="google">Inicia sesión con google</div>
+                <div> <img src="https://img.icons8.com/plasticine/2x/ms-outlook--v2.png" alt="outlook">Inicia sesión con outlook</div>
+            </section>
+            <p class="login__container--register"> No tienes cuenta <a href="">Registrate aquí</a></p>
+        </section>
+        <footer class="footer">
+            <a href="/">Terminos y condiciones</a>
+            <a href="/">Privacidad</a>
+            <a href="/">Contacto</a>
+        </footer>
+    </section>
+</body>
+</html>
